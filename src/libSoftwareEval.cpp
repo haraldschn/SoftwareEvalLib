@@ -18,6 +18,7 @@
 
 #include "TracePrinterPlugin.h"
 #include "PerformanceEstimatorPlugin.h"
+#include "PerformanceExplorerPlugin.h"
 
 #include "etiss/Plugin.h"
 #include "etiss/Misc.h" // Configuration
@@ -32,7 +33,7 @@ extern "C"
 
   unsigned SoftwareEval_countPlugin()
   {
-    return 2;
+    return 3;
   }
 
   const char * SoftwareEval_namePlugin(unsigned index)
@@ -43,6 +44,8 @@ extern "C"
       return "TracePrinterPlugin";
     case 1:
       return "PerformanceEstimatorPlugin";
+    case 2:
+      return "PerformanceExplorerPlugin";
     default:
       return "0";
     }
@@ -58,6 +61,8 @@ extern "C"
       return new TracePrinterPlugin(&cfg);
     case 1:
       return new PerformanceEstimatorPlugin(&cfg);
+    case 2:
+      return new PerformanceExplorerPlugin(&cfg);
     default:
       return 0;
     }
