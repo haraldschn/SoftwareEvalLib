@@ -25,7 +25,6 @@
 
 PerformanceEstimatorPlugin::PerformanceEstimatorPlugin(etiss::Configuration* config)
 {
-  
   // Get config data
   std::string uArchName = config->get<std::string>("plugin.perfEst.uArch", "");
   printActive = (bool)config->get<int>("plugin.perfEst.print", false);
@@ -60,7 +59,7 @@ PerformanceEstimatorPlugin::PerformanceEstimatorPlugin(etiss::Configuration* con
     {
       std::cout << "ERROR: SwEvalBackends::Factory failed to provide channel for <" << uArchName << ">" << std::endl;
     }
-    estimator_ptr = backendFactory.getPerformanceEstimator(backendHandle);
+    estimator_ptr = backendFactory.getPerformanceEstimator(backendHandle, *config);
     if (estimator_ptr == nullptr)
     {
       std::cout << "ERROR: SwEvalBackends::Factory failed to provide performance-estimator for <" << uArchName << ">" << std::endl;
@@ -70,13 +69,12 @@ PerformanceEstimatorPlugin::PerformanceEstimatorPlugin(etiss::Configuration* con
       tracePrinter_ptr = backendFactory.getTracePrinter(backendHandle);
       if (tracePrinter_ptr == nullptr)
       {
-	std::cout << "ERROR: SwEvalBackends::Factory failed to provide trace-printer for <" << uArchName << ">" << std::endl;
+        std::cout << "ERROR: SwEvalBackends::Factory failed to provide trace-printer for <" << uArchName << ">" << std::endl;
       }
     }
   }
   
   // TODO: Add error handling in case any of the above "gets" fails
-  
   // Connect components
   estimator_ptr->connectChannel(channel_ptr);
   monitor_ptr->connectChannel(channel_ptr);

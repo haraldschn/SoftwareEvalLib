@@ -28,7 +28,7 @@ namespace SwEvalMonitors
 class Factory
 {
 private:
-  enum var_t {CV32E40P, CVA6, AssemblyTrace, InstructionTrace_RV64};
+  enum var_t {CV32E40P, CVA6, AssemblyTrace, InstructionTrace_RV64, TestCore};
 public:
     int getVariantHandle(std::string);
     Monitor* getMonitor(int);
