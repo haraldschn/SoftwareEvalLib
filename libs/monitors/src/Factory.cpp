@@ -44,6 +44,10 @@ int Factory::getVariantHandle(std::string varName_)
     {
         return InstructionTrace_RV64;
     }
+    if(varName_ == "TESTCORE") // TODO: remove me
+    {
+        return TestCore;
+    }
     return -1;
 }
 
@@ -52,7 +56,9 @@ Monitor* Factory::getMonitor(int var_)
   switch((var_t)var_)
   {
     case CV32E40P: return new CV32E40P_Monitor();
-    case CVA6: return new CVA6_Monitor();
+    case TestCore:
+    case CVA6:
+      return new CVA6_Monitor();
     case AssemblyTrace: return new AssemblyTrace_Monitor();
     case InstructionTrace_RV64: return new InstructionTrace_RV64_Monitor();
     default: return nullptr;
