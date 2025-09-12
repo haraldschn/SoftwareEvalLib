@@ -1056,11 +1056,18 @@ static InstructionMonitor *instrMonitor_sb = new InstructionMonitor(
     int rs2 = 0;
     static etiss::instr::BitArrayRange R_rs2_0(24,20);
     rs2 += R_rs2_0.read(ba) << 0;
+    int imm = 0;
+    static etiss::instr::BitArrayRange R_imm_5(31,25);
+    imm += R_imm_5.read(ba) << 5;
+    static etiss::instr::BitArrayRange R_imm_0(11,7);
+    imm += R_imm_0.read(ba) << 0;
     ret_strs << "RV32_4ISSUE_Monitor_typeId_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << 35 << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_rs1_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rs1 << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_rs2_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rs2 << ";\n";
+    
+    ret_strs << "RV32_4ISSUE_Monitor_addr_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_pc_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_4ISSUE_Monitor_instrCnt += 1;\n";
@@ -1083,11 +1090,18 @@ static InstructionMonitor *instrMonitor_sh = new InstructionMonitor(
     int rs2 = 0;
     static etiss::instr::BitArrayRange R_rs2_0(24,20);
     rs2 += R_rs2_0.read(ba) << 0;
+    int imm = 0;
+    static etiss::instr::BitArrayRange R_imm_5(31,25);
+    imm += R_imm_5.read(ba) << 5;
+    static etiss::instr::BitArrayRange R_imm_0(11,7);
+    imm += R_imm_0.read(ba) << 0;
     ret_strs << "RV32_4ISSUE_Monitor_typeId_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << 36 << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_rs1_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rs1 << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_rs2_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rs2 << ";\n";
+    
+    ret_strs << "RV32_4ISSUE_Monitor_addr_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_pc_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_4ISSUE_Monitor_instrCnt += 1;\n";
@@ -1110,11 +1124,18 @@ static InstructionMonitor *instrMonitor_sw = new InstructionMonitor(
     int rs2 = 0;
     static etiss::instr::BitArrayRange R_rs2_0(24,20);
     rs2 += R_rs2_0.read(ba) << 0;
+    int imm = 0;
+    static etiss::instr::BitArrayRange R_imm_5(31,25);
+    imm += R_imm_5.read(ba) << 5;
+    static etiss::instr::BitArrayRange R_imm_0(11,7);
+    imm += R_imm_0.read(ba) << 0;
     ret_strs << "RV32_4ISSUE_Monitor_typeId_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << 37 << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_rs1_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rs1 << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_rs2_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rs2 << ";\n";
+    
+    ret_strs << "RV32_4ISSUE_Monitor_addr_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_pc_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_4ISSUE_Monitor_instrCnt += 1;\n";

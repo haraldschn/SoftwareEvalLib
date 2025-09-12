@@ -29,7 +29,7 @@ TracePrinterPlugin::TracePrinterPlugin(etiss::Configuration* config)
   bool streamToFile = (bool)config->get<int>("plugin.tracePrinter.stream.toFile", false);
   std::string outDirName = config->get<std::string>("plugin.tracePrinter.stream.outDir", "");
   std::string outFileName = config->get<std::string>("plugin.tracePrinter.stream.fileName", traceName);
-  std::string outFilePostfix = config->get<std::string>("plugin.tracePrinter.stream.postfix", ".txt");
+  std::string outFilePostfix = config->get<std::string>("plugin.tracePrinter.stream.postfix", ".csv");
   int maxFileSize = config->get<int>("plugin.tracePrinter.stream.rotateSize", 0x1000000);
 
   // Get monitor

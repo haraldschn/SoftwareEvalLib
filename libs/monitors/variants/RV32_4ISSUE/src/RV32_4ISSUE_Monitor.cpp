@@ -36,8 +36,8 @@ extern "C"
   uint64_t *RV32_4ISSUE_Monitor_pc_buffer;
   uint64_t *RV32_4ISSUE_Monitor_brTarget_buffer;
   uint64_t *RV32_4ISSUE_Monitor_imm_buffer;
-  uint64_t *RV32_4ISSUE_Monitor_rs2_data_buffer;
   uint64_t *RV32_4ISSUE_Monitor_addr_buffer;
+  uint64_t *RV32_4ISSUE_Monitor_rs2_data_buffer;
 }
 
 extern InstructionMonitorSet* RV32_4ISSUE_InstrMonitorSet;
@@ -58,8 +58,8 @@ void RV32_4ISSUE_Monitor::connectChannel(Channel* channel_)
   RV32_4ISSUE_Monitor_pc_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("pc"));
   RV32_4ISSUE_Monitor_brTarget_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("brTarget"));
   RV32_4ISSUE_Monitor_imm_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("imm"));
-  RV32_4ISSUE_Monitor_rs2_data_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("rs2_data"));
   RV32_4ISSUE_Monitor_addr_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("addr"));
+  RV32_4ISSUE_Monitor_rs2_data_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("rs2_data"));
 }
 
 
@@ -76,8 +76,8 @@ std::string RV32_4ISSUE_Monitor::getBlockDeclarations(void) const
   ret_strs << "extern uint64_t *RV32_4ISSUE_Monitor_pc_buffer;\n";
   ret_strs << "extern uint64_t *RV32_4ISSUE_Monitor_brTarget_buffer;\n";
   ret_strs << "extern uint64_t *RV32_4ISSUE_Monitor_imm_buffer;\n";
-  ret_strs << "extern uint64_t *RV32_4ISSUE_Monitor_rs2_data_buffer;\n";
   ret_strs << "extern uint64_t *RV32_4ISSUE_Monitor_addr_buffer;\n";
+  ret_strs << "extern uint64_t *RV32_4ISSUE_Monitor_rs2_data_buffer;\n";
 
   return ret_strs.str();
 }
