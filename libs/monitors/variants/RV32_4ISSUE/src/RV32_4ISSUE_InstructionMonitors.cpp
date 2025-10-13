@@ -784,8 +784,6 @@ static InstructionMonitor *instrMonitor_div = new InstructionMonitor(
     
     ret_strs << "RV32_4ISSUE_Monitor_rd_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rd << ";\n";
     
-    ret_strs << "RV32_4ISSUE_Monitor_rs2_data_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << "*((RV32IMACFD*)cpu)->X["<< rs2 << "]" << ";\n";
-    
     ret_strs << "RV32_4ISSUE_Monitor_pc_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_4ISSUE_Monitor_instrCnt += 1;\n";
     return ret_strs.str();
@@ -817,8 +815,6 @@ static InstructionMonitor *instrMonitor_rem = new InstructionMonitor(
     ret_strs << "RV32_4ISSUE_Monitor_rs2_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rs2 << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_rd_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rd << ";\n";
-    
-    ret_strs << "RV32_4ISSUE_Monitor_rs2_data_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << "*((RV32IMACFD*)cpu)->X["<< rs2 << "]" << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_pc_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_4ISSUE_Monitor_instrCnt += 1;\n";
@@ -852,8 +848,6 @@ static InstructionMonitor *instrMonitor_divu = new InstructionMonitor(
     
     ret_strs << "RV32_4ISSUE_Monitor_rd_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rd << ";\n";
     
-    ret_strs << "RV32_4ISSUE_Monitor_rs2_data_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << "*((RV32IMACFD*)cpu)->X["<< rs2 << "]" << ";\n";
-    
     ret_strs << "RV32_4ISSUE_Monitor_pc_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_4ISSUE_Monitor_instrCnt += 1;\n";
     return ret_strs.str();
@@ -885,8 +879,6 @@ static InstructionMonitor *instrMonitor_remu = new InstructionMonitor(
     ret_strs << "RV32_4ISSUE_Monitor_rs2_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rs2 << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_rd_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << rd << ";\n";
-    
-    ret_strs << "RV32_4ISSUE_Monitor_rs2_data_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << "*((RV32IMACFD*)cpu)->X["<< rs2 << "]" << ";\n";
     
     ret_strs << "RV32_4ISSUE_Monitor_pc_buffer[*RV32_4ISSUE_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_4ISSUE_Monitor_instrCnt += 1;\n";
