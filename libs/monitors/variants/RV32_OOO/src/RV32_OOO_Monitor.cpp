@@ -34,6 +34,7 @@ extern "C"
   uint64_t *RV32_OOO_Monitor_rs2_buffer;
   uint64_t *RV32_OOO_Monitor_rd_buffer;
   uint64_t *RV32_OOO_Monitor_pc_buffer;
+  uint64_t *RV32_OOO_Monitor_addr_buffer;
 }
 
 extern InstructionMonitorSet* RV32_OOO_InstrMonitorSet;
@@ -52,6 +53,7 @@ void RV32_OOO_Monitor::connectChannel(Channel* channel_)
   RV32_OOO_Monitor_rs2_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("rs2"));
   RV32_OOO_Monitor_rd_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("rd"));
   RV32_OOO_Monitor_pc_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("pc"));
+  RV32_OOO_Monitor_addr_buffer = static_cast<uint64_t*>(channel_->getTraceValueHook("addr"));
 }
 
 
@@ -66,6 +68,7 @@ std::string RV32_OOO_Monitor::getBlockDeclarations(void) const
   ret_strs << "extern uint64_t *RV32_OOO_Monitor_rs2_buffer;\n";
   ret_strs << "extern uint64_t *RV32_OOO_Monitor_rd_buffer;\n";
   ret_strs << "extern uint64_t *RV32_OOO_Monitor_pc_buffer;\n";
+  ret_strs << "extern uint64_t *RV32_OOO_Monitor_addr_buffer;\n";
 
   return ret_strs.str();
 }
