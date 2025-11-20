@@ -362,6 +362,8 @@ static InstructionMonitor *instrMonitor_addi = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -388,6 +390,8 @@ static InstructionMonitor *instrMonitor_xori = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 11 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -416,6 +420,8 @@ static InstructionMonitor *instrMonitor_ori = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -442,6 +448,8 @@ static InstructionMonitor *instrMonitor_andi = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 13 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -470,6 +478,8 @@ static InstructionMonitor *instrMonitor_slti = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -496,6 +506,8 @@ static InstructionMonitor *instrMonitor_sltiu = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 15 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -524,6 +536,8 @@ static InstructionMonitor *instrMonitor_slli = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -550,6 +564,8 @@ static InstructionMonitor *instrMonitor_srli = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 17 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -578,6 +594,8 @@ static InstructionMonitor *instrMonitor_srai = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -600,6 +618,10 @@ static InstructionMonitor *instrMonitor_auipc = new InstructionMonitor(
     rd += R_rd_0.read(ba) << 0;
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 19 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -621,6 +643,10 @@ static InstructionMonitor *instrMonitor_lui = new InstructionMonitor(
     static etiss::instr::BitArrayRange R_rd_0(11,7);
     rd += R_rd_0.read(ba) << 0;
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 20 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -905,6 +931,8 @@ static InstructionMonitor *instrMonitor_csrrw = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -931,6 +959,8 @@ static InstructionMonitor *instrMonitor_csrrs = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 30 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -959,6 +989,8 @@ static InstructionMonitor *instrMonitor_csrrc = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -980,6 +1012,10 @@ static InstructionMonitor *instrMonitor_csrrwi = new InstructionMonitor(
     static etiss::instr::BitArrayRange R_rd_0(11,7);
     rd += R_rd_0.read(ba) << 0;
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 32 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -1003,6 +1039,10 @@ static InstructionMonitor *instrMonitor_csrrsi = new InstructionMonitor(
     rd += R_rd_0.read(ba) << 0;
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 33 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -1024,6 +1064,10 @@ static InstructionMonitor *instrMonitor_csrrci = new InstructionMonitor(
     static etiss::instr::BitArrayRange R_rd_0(11,7);
     rd += R_rd_0.read(ba) << 0;
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 34 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -1059,6 +1103,8 @@ static InstructionMonitor *instrMonitor_sb = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_addr_buffer[*RV32_OOO_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -1092,6 +1138,8 @@ static InstructionMonitor *instrMonitor_sh = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_addr_buffer[*RV32_OOO_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
     
@@ -1127,6 +1175,8 @@ static InstructionMonitor *instrMonitor_sw = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_addr_buffer[*RV32_OOO_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -1156,6 +1206,8 @@ static InstructionMonitor *instrMonitor_lw = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 38 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -1189,6 +1241,8 @@ static InstructionMonitor *instrMonitor_lh = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_addr_buffer[*RV32_OOO_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
@@ -1220,6 +1274,8 @@ static InstructionMonitor *instrMonitor_lhu = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 40 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
@@ -1253,6 +1309,8 @@ static InstructionMonitor *instrMonitor_lb = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_addr_buffer[*RV32_OOO_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
@@ -1285,6 +1343,8 @@ static InstructionMonitor *instrMonitor_lbu = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_addr_buffer[*RV32_OOO_Monitor_instrCnt] = " << "("<< "*((RV32IMACFD*)cpu)->X["<< rs1 << "]"<< " + "<< imm<< ")" << ";\n";
@@ -1316,6 +1376,8 @@ static InstructionMonitor *instrMonitor_beq = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_OOO_Monitor_instrCnt += 1;\n";
     return ret_strs.str();
@@ -1342,6 +1404,8 @@ static InstructionMonitor *instrMonitor_bne = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_OOO_Monitor_instrCnt += 1;\n";
@@ -1370,6 +1434,8 @@ static InstructionMonitor *instrMonitor_blt = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_OOO_Monitor_instrCnt += 1;\n";
     return ret_strs.str();
@@ -1396,6 +1462,8 @@ static InstructionMonitor *instrMonitor_bge = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_OOO_Monitor_instrCnt += 1;\n";
@@ -1424,6 +1492,8 @@ static InstructionMonitor *instrMonitor_bltu = new InstructionMonitor(
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_OOO_Monitor_instrCnt += 1;\n";
     return ret_strs.str();
@@ -1450,6 +1520,8 @@ static InstructionMonitor *instrMonitor_bgeu = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs2 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
     ret_strs << "*RV32_OOO_Monitor_instrCnt += 1;\n";
@@ -1488,6 +1560,10 @@ static InstructionMonitor *instrMonitor_jal = new InstructionMonitor(
     rd += R_rd_0.read(ba) << 0;
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 50 << ";\n";
     
+    ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
+    
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_pc_buffer[*RV32_OOO_Monitor_instrCnt] = " << ic.current_address_ << ";\n";
@@ -1514,6 +1590,8 @@ static InstructionMonitor *instrMonitor_jalr = new InstructionMonitor(
     ret_strs << "RV32_OOO_Monitor_typeId_buffer[*RV32_OOO_Monitor_instrCnt] = " << 51 << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rs1_buffer[*RV32_OOO_Monitor_instrCnt] = " << rs1 << ";\n";
+    
+    ret_strs << "RV32_OOO_Monitor_rs2_buffer[*RV32_OOO_Monitor_instrCnt] = " << "128" << ";\n";
     
     ret_strs << "RV32_OOO_Monitor_rd_buffer[*RV32_OOO_Monitor_instrCnt] = " << rd << ";\n";
     
