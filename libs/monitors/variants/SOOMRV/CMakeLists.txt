@@ -1,7 +1,7 @@
 
 TARGET_SOURCES(SWEVAL_MONITORS_LIB PRIVATE
-  	src/RV32_4ISSUE_InstructionMonitors.cpp
-	src/RV32_4ISSUE_Monitor.cpp
+  	src/SOOMRV_InstructionMonitors.cpp
+	src/SOOMRV_Monitor.cpp
 
 )
 

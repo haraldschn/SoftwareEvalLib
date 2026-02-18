@@ -1,5 +1,5 @@
 /*
-* Copyright 2025 Chair of EDA, Technical University of Munich
+* Copyright 2026 Chair of EDA, Technical University of Munich
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -17,22 +17,22 @@
 /********************* AUTO GENERATE FILE (create by M2-ISA-R::Trace-Generator) *********************/
 
 
-#ifndef SWEVAL_MONITOR_RV32_4ISSUE_MONITOR_H
-#define SWEVAL_MONITOR_RV32_4ISSUE_MONITOR_H
+#ifndef SWEVAL_MONITOR_SOOMRV_MONITOR_H
+#define SWEVAL_MONITOR_SOOMRV_MONITOR_H
 
 #include "Monitor.h"
 #include "softwareEval-backends/Channel.h"
 
 #include <string>
 
-class RV32_4ISSUE_Monitor : public Monitor
+class SOOMRV_Monitor : public Monitor
 {
 public:
 
-  RV32_4ISSUE_Monitor();
+  SOOMRV_Monitor();
 
   virtual void connectChannel(Channel*);
   virtual std::string getBlockDeclarations(void) const;
 };
 
-#endif // SWEVAL_MONITOR_RV32_4ISSUE_MONITOR_H
+#endif // SWEVAL_MONITOR_SOOMRV_MONITOR_H
